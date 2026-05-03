@@ -15,6 +15,10 @@ export default function ProjectShowCase() {
     setProjects([...projects, newProject]);
   };
 
+  const handleDeleteProject = (id) => {
+    setProjects(projects.filter((project) => project.id !== id));
+  };
+
   return (
     <div className="app-container">
       <header className="app-header">
@@ -28,7 +32,7 @@ export default function ProjectShowCase() {
           projects={projects} 
           searchQuery={searchQuery} 
           onSearchChange={setSearchQuery} 
-          onDeleteChange={(id) => {handleDeleteProject}}
+        onDeleteProject={handleDeleteProject}
         />
       </main>
     </div>

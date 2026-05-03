@@ -24,7 +24,7 @@ export default function ProjectList({ projects, searchQuery, onSearchChange, onD
             <ProjectItem 
               key={project.id} 
               project={project} 
-              onDelete={() => onDeleteProject(project.id)} 
+            onDelete={() => onDeleteProject(project.id)}
             />
           ))
         ) : (
